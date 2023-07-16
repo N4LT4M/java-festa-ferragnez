@@ -30,6 +30,7 @@ Bonus: se avete usato il ciclo for per cercare il nome nella lista nella consegn
         //imposto una variabile booleana come flag
         boolean trovato = false;
 
+        /*soluzione con ciclo for
         //verifico con un un if se il nome corrisponde ad uno dell'array, unendolo con un ciclo for per fare il contorllo con ogni nome della lista
         for (int i = 0; i < arrayInvitati.length; i++) {
             if (nameOfUser.equals(arrayInvitati[i])){
@@ -43,6 +44,25 @@ Bonus: se avete usato il ciclo for per cercare il nome nella lista nella consegn
         } else {
             System.out.println("mi dispiace, non puoi entrare");
         }
+        scan.close();
+         */
+
+        //soluzione con ciclo while ( personalmente preferisco il ciclo for)
+        int i = 0; // inizializziamo l'indice per il ciclo while
+
+        while (i < arrayInvitati.length && !trovato)/*!trovato vuol dire trovato = false*/ {
+            if (nameOfUser.equals(arrayInvitati[i])) {
+                trovato = true; // il nome è stato trovato nell'array
+            }
+            i++; // incrementiamo l'indice per passare all'elemento successivo
+        }
+
+        if (trovato) {
+            System.out.println("Puoi entrare");
+        } else {
+            System.out.println("Non puoi entrare");
+        }
+
         scan.close();
 
 
