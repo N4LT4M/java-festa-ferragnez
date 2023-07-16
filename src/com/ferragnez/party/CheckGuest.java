@@ -37,15 +37,7 @@ Bonus: se avete usato il ciclo for per cercare il nome nella lista nella consegn
                 trovato = true;//il nome viene trovato nell'array durante il ciclo for
                 break;
             }
-        }
-
-        if (trovato){
-            System.out.println("benvenuto, puoi entrare");
-        } else {
-            System.out.println("mi dispiace, non puoi entrare");
-        }
-        scan.close();
-         */
+        }*/
 
         //soluzione con ciclo while ( personalmente preferisco il ciclo for)
         int i = 0; // inizializziamo l'indice per il ciclo while
@@ -57,15 +49,14 @@ Bonus: se avete usato il ciclo for per cercare il nome nella lista nella consegn
             i++; // incrementiamo l'indice per passare all'elemento successivo
         }
 
-        if (trovato) {
-            System.out.println("Puoi entrare");
+
+        if (trovato){
+            System.out.println("benvenuto, puoi entrare");
         } else {
-            System.out.println("Non puoi entrare");
+            System.out.println("mi dispiace, non puoi entrare");
         }
-
         scan.close();
-
-
+         */
 
 
     }
