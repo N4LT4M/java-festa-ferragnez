@@ -14,22 +14,34 @@ verificare che il nome sia presente nella lista
 lasciarlo entrare o rispedirlo cortesemente da dove è venuto.
 Bonus: se avete usato il ciclo for per cercare il nome nella lista nella consegna base, implementare lo stesso programma usando il ciclo while, e viceversa
 */
+        //creo un array con la lista dei nomi degli invitati
         String[] arrayInvitati = {"Marco", "Luca", "Alessia", "Giulia", "Matteo"};
 
+        //dichiaro la variabile per il nome dell'utente
         String nameOfUser;
 
+        //dichiaro lo scanner
         Scanner scan = new Scanner(System.in);
 
-
+        //faccio scrivere all'utente il proprio nome
         System.out.println("come ti chiami?");
         nameOfUser = scan.nextLine();
 
+        //imposto una variabile booleana come flag
+        boolean trovato = false;
+
+        //verifico con un un if se il nome corrisponde ad uno dell'array, unendolo con un ciclo for per fare il contorllo con ogni nome della lista
         for (int i = 0; i < arrayInvitati.length; i++) {
             if (nameOfUser.equals(arrayInvitati[i])){
-                System.out.println("puoi entrare");
-            } else {}
+                trovato = true;//il nome viene trovato nell'array durante il ciclo for
+                break;
+            }
+        }
 
-
+        if (trovato){
+            System.out.println("benvenuto, puoi entrare");
+        } else {
+            System.out.println("mi dispiace, non puoi entrare");
         }
         scan.close();
 
